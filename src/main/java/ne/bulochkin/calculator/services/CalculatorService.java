@@ -23,5 +23,9 @@ public class CalculatorService {
         return (num1+num2);
     }
 
+    public String hello(){
+        return "<b>hello</b>";
+    }
+
 
 }

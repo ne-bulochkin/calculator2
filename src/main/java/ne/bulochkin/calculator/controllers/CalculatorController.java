@@ -2,7 +2,6 @@ package ne.bulochkin.calculator.controllers;
 
 import lombok.AllArgsConstructor;
 import ne.bulochkin.calculator.services.CalculatorService;
-import ne.bulochkin.calculator.services.HelloService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -13,11 +12,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/calculator")
 public class CalculatorController {
     private final CalculatorService calculatorService;
-    private final HelloService helloService;
 
     @GetMapping()
     public String hello(){
-        return helloService.hello();
+        return calculatorService.hello();
     }
 
     @GetMapping(path = "/plus")
